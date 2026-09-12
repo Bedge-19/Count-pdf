@@ -1,0 +1,3 @@
+## 2025-05-12 - Dynamic Feedback Accessibility in Single-Page Uploaders
+**Learning:** Single-page file uploaders that update dynamically via JavaScript require explicit ARIA roles (`role="alert"` for errors, `role="status"` with `aria-live="polite"` for results, `aria-busy` for pending actions) and explicit `:focus-visible` styles so screen reader and keyboard users receive immediate, clear feedback on all interactions.
+**Action:** Always add ARIA live regions to error and result containers, set `aria-busy` on action buttons during async requests, hide decorative SVGs with `aria-hidden="true"`, and define `:focus-visible` styles for interactive elements.
