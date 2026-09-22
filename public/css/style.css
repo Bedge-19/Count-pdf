@@ -315,6 +315,14 @@ body {
   color: var(--success-icon);
 }
 
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-icon:focus-visible,
+.upload-zone:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .hidden {
   display: none !important;
 }
