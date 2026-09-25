@@ -50,13 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
         handleFiles(files);
     });
 
-    // Event Listeners for click upload
+    // Event Listeners for click and keyboard upload
     chooseFileBtn.addEventListener('click', () => {
         fileInput.click();
     });
     
     uploadZone.addEventListener('click', (e) => {
         if(e.target !== chooseFileBtn) {
+            fileInput.click();
+        }
+    });
+
+    uploadZone.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
             fileInput.click();
         }
     });
