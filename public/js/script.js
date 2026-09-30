@@ -61,6 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Keyboard support for drag & drop zone
+    uploadZone.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            fileInput.click();
+        }
+    });
+
     fileInput.addEventListener('change', function() {
         handleFiles(this.files);
     });
