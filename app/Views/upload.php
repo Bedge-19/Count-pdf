@@ -49,7 +49,7 @@
                         <span id="file-size" class="file-size">2.3 MB</span>
                     </div>
                 </div>
-                <button id="remove-file-btn" class="btn-icon" aria-label="Remove file" type="button">
+                <button id="remove-file-btn" class="btn-icon" aria-label="Remove file" title="Remove file" type="button">
                     <!-- Close Icon -->
                     <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -58,7 +58,7 @@
             </div>
 
             <!-- Error Alert (Hidden initially) -->
-            <div id="alert-box" class="alert hidden">
+            <div id="alert-box" class="alert hidden" role="alert" aria-live="assertive">
                 <!-- Warning Icon -->
                 <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
@@ -77,7 +77,7 @@
             </button>
 
             <!-- Result Card (Hidden initially) -->
-            <div id="result-card" class="result-card hidden">
+            <div id="result-card" class="result-card hidden" role="region" aria-live="polite" aria-label="PDF Information">
                 <h3>PDF Information</h3>
                 <div class="result-row">
                     <span class="result-label">File Name:</span>
