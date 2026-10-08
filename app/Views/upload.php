@@ -21,7 +21,7 @@
             </div>
 
             <!-- Upload Zone -->
-            <div id="upload-zone" class="upload-zone">
+            <div id="upload-zone" class="upload-zone" role="button" tabindex="0" aria-label="Upload PDF file">
                 <input type="file" id="pdf-upload" accept="application/pdf" hidden>
                 <div class="upload-content">
                     <!-- Document Add Icon -->
