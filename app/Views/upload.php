@@ -21,8 +21,8 @@
             </div>
 
             <!-- Upload Zone -->
-            <div id="upload-zone" class="upload-zone">
-                <input type="file" id="pdf-upload" accept="application/pdf" hidden>
+            <div id="upload-zone" class="upload-zone" tabindex="0" role="button" aria-label="Upload PDF file by dropping or selecting">
+                <input type="file" id="pdf-upload" accept="application/pdf" hidden tabindex="-1">
                 <div class="upload-content">
                     <!-- Document Add Icon -->
                     <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -31,7 +31,7 @@
                     <h2>📄 Upload PDF File</h2>
                     <p class="supported-format">Supported format: <strong>PDF only</strong></p>
                     <p class="max-size">Maximum file size: <strong>20 MB</strong></p>
-                    <button class="btn-secondary" id="choose-file-btn" type="button">Choose File</button>
+                    <button class="btn-secondary" id="choose-file-btn" type="button" tabindex="-1">Choose File</button>
                     <p class="drag-drop-text">or Drag & Drop Area</p>
                 </div>
             </div>

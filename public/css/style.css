@@ -78,9 +78,11 @@ body {
   cursor: pointer;
 }
 
-.upload-zone:hover, .upload-zone.dragover {
+.upload-zone:hover, .upload-zone.dragover, .upload-zone:focus-visible {
   border-color: var(--primary);
   background-color: var(--focus-ring);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .upload-icon {
@@ -124,6 +126,14 @@ body {
 .btn-secondary:hover {
   background: var(--bg);
   border-color: var(--border-hover);
+}
+
+.btn-secondary:focus-visible,
+.btn-primary:focus-visible,
+.btn-icon:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
 .drag-drop-text {
