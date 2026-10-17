@@ -318,3 +318,11 @@ body {
 .hidden {
   display: none !important;
 }
+
+.upload-zone:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-icon:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
