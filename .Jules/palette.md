@@ -1,0 +1,3 @@
+## 2026-10-20 - Custom Dropzone Keyboard & Screen Reader Accessibility
+**Learning:** Custom file upload dropzones built using `<div>` wrappers hide the underlying file input element. Without `tabindex="0"`, `role="button"`, keydown handlers for `Enter`/`Space`, and `:focus-visible` ring styles, keyboard and screen-reader users cannot discover or activate the dropzone.
+**Action:** Always provide explicit keyboard focusability (`tabindex="0"`), keyboard activation listeners (`Enter` and `Space`), high-contrast focus rings (`:focus-visible`), and ARIA live regions for dynamic validation alerts and results.
