@@ -61,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    uploadZone.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            fileInput.click();
+        }
+    });
+
     fileInput.addEventListener('change', function() {
         handleFiles(this.files);
     });
@@ -139,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Set Loading State
         countBtn.disabled = true;
+        countBtn.setAttribute('aria-busy', 'true');
         btnText.textContent = 'Counting Pages...';
         btnSpinner.classList.remove('hidden');
         resultCard.classList.add('hidden');
@@ -174,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } finally {
             // Reset Button State
             countBtn.disabled = false;
+            countBtn.removeAttribute('aria-busy');
             btnText.textContent = 'Count Pages';
             btnSpinner.classList.add('hidden');
         }
