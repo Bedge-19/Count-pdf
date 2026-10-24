@@ -61,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    uploadZone.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && e.target !== chooseFileBtn) {
+            e.preventDefault();
+            fileInput.click();
+        }
+    });
+
     fileInput.addEventListener('change', function() {
         handleFiles(this.files);
     });
