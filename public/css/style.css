@@ -126,6 +126,12 @@ body {
   border-color: var(--border-hover);
 }
 
+.btn-secondary:focus-visible,
+.upload-zone:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .drag-drop-text {
   margin-top: 1rem;
   font-size: 0.875rem;
@@ -195,6 +201,11 @@ body {
   color: var(--error-text);
 }
 
+.btn-icon:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .close-icon {
   width: 20px;
   height: 20px;
@@ -240,6 +251,11 @@ body {
 .btn-primary:hover:not(:disabled) {
   background-color: var(--primary-hover);
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--primary-hover);
+  outline-offset: 2px;
 }
 
 .btn-primary:disabled {
