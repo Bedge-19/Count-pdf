@@ -83,6 +83,13 @@ body {
   background-color: var(--focus-ring);
 }
 
+.upload-zone:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+  background-color: var(--focus-ring);
+}
+
 .upload-icon {
   width: 48px;
   height: 48px;
@@ -124,6 +131,11 @@ body {
 .btn-secondary:hover {
   background: var(--bg);
   border-color: var(--border-hover);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .drag-drop-text {
@@ -195,6 +207,11 @@ body {
   color: var(--error-text);
 }
 
+.btn-icon:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .close-icon {
   width: 20px;
   height: 20px;
@@ -240,6 +257,11 @@ body {
 .btn-primary:hover:not(:disabled) {
   background-color: var(--primary-hover);
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .btn-primary:disabled {
