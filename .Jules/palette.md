@@ -1,0 +1,3 @@
+## 2026-11-08 - Accessible live regions and keyboard focus rings for dropzones
+**Learning:** File upload dropzones containing text and button children often suffer from drag flicker when dragenter fires across children, and lack clear keyboard focus indicators or screen reader announcements for dynamic alert/result transitions.
+**Action:** Use `pointer-events: none` on upload zone children (with `pointer-events: auto` on nested action buttons), pair with `:focus-visible` ring styling using theme focus tokens, and mark dynamic result/alert containers with `role="status"`/`role="alert"` and `aria-live`.
