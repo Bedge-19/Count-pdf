@@ -83,6 +83,14 @@ body {
   background-color: var(--focus-ring);
 }
 
+.upload-content {
+  pointer-events: none;
+}
+
+.upload-content button {
+  pointer-events: auto;
+}
+
 .upload-icon {
   width: 48px;
   height: 48px;
@@ -124,6 +132,14 @@ body {
 .btn-secondary:hover {
   background: var(--bg);
   border-color: var(--border-hover);
+}
+
+.btn-secondary:focus-visible,
+.btn-primary:focus-visible,
+.btn-icon:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
 .drag-drop-text {
