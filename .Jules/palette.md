@@ -1,0 +1,3 @@
+## 2026-11-09 - Accessible Custom Drop Zones
+**Learning:** Custom file upload dropzones that hide native `<input type="file">` elements isolate keyboard and screen-reader users unless the container has `role="button"` (or native button semantics), `tabindex="0"`, an explicit `aria-label`, and keyboard event handlers (`Enter` and `Space`) to trigger the file dialog. Sub-buttons inside the container should be set to `tabindex="-1"` to prevent redundant tab stops.
+**Action:** When styling custom drag-and-drop file uploaders, make the parent drop zone focusable with keyboard trigger handling, provide ARIA attributes, and ensure visible focus indicators.
