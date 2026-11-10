@@ -50,13 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
         handleFiles(files);
     });
 
-    // Event Listeners for click upload
+    // Event Listeners for click and keyboard upload
     chooseFileBtn.addEventListener('click', () => {
         fileInput.click();
     });
     
     uploadZone.addEventListener('click', (e) => {
-        if(e.target !== chooseFileBtn) {
+        if (e.target !== chooseFileBtn) {
+            fileInput.click();
+        }
+    });
+
+    uploadZone.addEventListener('keydown', (e) => {
+        if (e.target === uploadZone && (e.key === 'Enter' || e.key === ' ')) {
+            e.preventDefault();
             fileInput.click();
         }
     });
@@ -100,12 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadZone.classList.add('hidden');
         fileInfoBox.classList.remove('hidden');
         countBtn.disabled = false;
+        countBtn.focus();
     }
 
     function resetState() {
         resetFileState();
         hideAlert();
         resultCard.classList.add('hidden');
+        chooseFileBtn.focus();
     }
 
     function resetFileState() {
