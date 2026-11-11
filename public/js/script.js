@@ -65,7 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
         handleFiles(this.files);
     });
 
-    removeFileBtn.addEventListener('click', resetState);
+    removeFileBtn.addEventListener('click', () => {
+        resetState();
+        chooseFileBtn.focus();
+    });
 
     countBtn.addEventListener('click', processPdf);
 
