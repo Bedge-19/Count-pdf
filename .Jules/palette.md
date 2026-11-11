@@ -1,0 +1,3 @@
+## 2026-11-11 - Dynamic Upload Form Keyboard Focus & Live Regions
+**Learning:** In minimal single-action upload forms without page reloads, interactive file-removal actions frequently leave keyboard focus orphaned on the hidden container, breaking the tab order. Additionally, dynamically inserted results and error banners without ARIA live regions are completely silent to screen readers.
+**Action:** Always pair dynamic file removal with explicit programmatic focus transfer back to the primary trigger (such as the choose file button), and designate error and result containers with `role="alert"` / `aria-live` regions.
